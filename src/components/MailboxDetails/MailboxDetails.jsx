@@ -7,6 +7,9 @@ const MailboxDetails = ({ mailboxes }) => {
     //returns first mailbox that matches string in props
     (mailbox) => mailbox._id === Number(mailboxId)
   );
+   if (!selectedBox) {
+    return <h2>Mailbox Not Found!</h2>;
+  }
 
   return (
     <>
